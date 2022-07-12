@@ -27,14 +27,14 @@ public:
     void Deposit()
     {
         long amt;
-        cout << "Enter Amount To Deposit? ";
+        cout << "Please Enter Amount To Deposit? ";
         cin >> amt;
         balance = balance + amt;
     }
     void Withdrawal()
     {
         long amt;
-        cout << "Enter Amount To Withdraw? ";
+        cout << "Please Enter Amount To Withdraw? ";
         cin >> amt;
         if (amt <= balance)
             balance = balance - amt;
@@ -68,7 +68,7 @@ int main()
         cout << "\n\n1:Display All\n2:By Account Number\n3:Deposit\n4:Withdraw\n5:Exit" << endl;
 
         // user input
-        cout << "Please input your choice: ";
+        cout << "Please choose your option: ";
         cin >> ch;
 
         switch (ch) {
@@ -86,7 +86,7 @@ int main()
                     break;
             }
             if (!found)
-                cout << "Record Not Found" << endl;
+                cout << "Account Not Found" << endl;
             break;
         case 3: // deposit operation
             cout << "Account Number To Deposit Amount? ";
@@ -99,7 +99,7 @@ int main()
                 }
             }
             if (!found)
-                cout << "Record Not Found" << endl;
+                cout << "Account Not Found" << endl;
             break;
         case 4: // withdraw operation
             cout << "Account Number To Withdraw Amount? ";
@@ -112,13 +112,13 @@ int main()
                 }
             }
             if (!found)
-                cout << "Record Not Found" << endl;
+                cout << "Account Not Found" << endl;
             break;
         case 5: // exit
             cout << "Have a Wonderful Day" << endl;
             break;
         default:
-            cout << "Wrong Option" << endl;
+            cout << "Wrong Choice" << endl;
         }
     } while (ch != 5);
     return 0;
